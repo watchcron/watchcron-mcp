@@ -1,0 +1,45 @@
+{
+  "name": "watchcron-mcp",
+  "version": "1.0.0",
+  "mcpName": "io.github.watchcron/watchcron-mcp",
+  "description": "MCP server for WatchCron — let AI agents monitor cron jobs and scheduled tasks",
+  "keywords": [
+    "mcp",
+    "cron",
+    "monitoring",
+    "heartbeat",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "watchcron",
+    "devops"
+  ],
+  "bin": {
+    "watchcron-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "author": "WatchCron <support@watchcron.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watchcron/watchcron-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3"
+  }
+}

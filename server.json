@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.watchcron/watchcron-mcp",
+  "description": "Monitor cron jobs from AI agents. Create monitors, check status, view ping history, and manage incidents.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/watchcron/watchcron-mcp",
+    "source": "github"
+  },
+  "homepage": "https://watchcron.com",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "watchcron-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "WATCHCRON_API_KEY",
+          "description": "Your WatchCron API key. Get one at watchcron.com.",
+          "isRequired": true
+        }
+      ]
+    }
+  ]
+}
