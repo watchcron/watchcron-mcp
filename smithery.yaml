@@ -1,0 +1,15 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: WatchCron API key from https://watchcron.com/settings/api
+  commandFunction:
+    |-
+    (config) => ({ command: 'npx', args: ['-y', 'watchcron-mcp'], env: { WATCHCRON_API_KEY: config.apiKey } })
